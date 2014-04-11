@@ -6,7 +6,7 @@ Some Twitter web app thing.
 
 This is currently insecure as fuck and not ready for any form of environment
 
-## Getting and using CloudBot
+## Getting and using twitterthing
 
 ### Download
 
@@ -20,7 +20,7 @@ Install the requirements, make your own data file.
 
 ./main.py
 
-## Getting help with CloudBot
+## Getting help with twitterthing
 
 ### Documentation
 
