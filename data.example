@@ -1,0 +1,44 @@
+{
+  "users":{
+      "user":"pass",
+      "user2":"pass2"
+    },
+  "perms":{
+      "user":
+      [
+        "someaccount",
+        "sharedaccount"
+      ],
+
+      "user2":
+      [
+        "someaccount2",
+        "sharedaccount"
+      ]
+    },
+  "accounts":{
+      "someaccount":{
+        "access_token":"",
+        "access_token_secret":"",
+        "consumer_key":"",
+        "consumer_secret":""
+        },
+      "someaccount2":{
+        "access_token":"",
+        "access_token_secret":"",
+        "consumer_key":"",
+        "consumer_secret":""
+        },
+       "sharedccount":{
+        "access_token":"",
+        "access_token_secret":"",
+        "consumer_key":"",
+        "consumer_secret":""
+        },
+      },
+  "info":{
+      "host":"127.0.0.1",
+      "port":8080
+  }
+
+}
