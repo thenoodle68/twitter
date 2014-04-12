@@ -7,6 +7,7 @@
 import cherrypy
 import json
 
+# yay data
 data = json.loads(open("data").read())
 
 SESSION_KEY = '_cp_username'
@@ -14,7 +15,7 @@ SESSION_KEY = '_cp_username'
 def check_credentials(username, password):
     """Verifies credentials for username and password.
     Returns None on success or a string describing the error on failure"""
-    # Adapt to your needs
+    # hahahahahaha
     if username in data["users"]:
         if password == data["users"][username]:
             return None
@@ -59,11 +60,11 @@ def require(*conditions):
 # if the user fulfills the conditions they define, False otherwise
 #
 # They can access the current username as cherrypy.request.login
-#
-# Define those at will however suits the application.
 
 def member_of(groupname):
+    """Returns a function that checks the membership of a group"""
     def check():
+        """Checks the membership of a group"""
         if cherrypy.request.login in data["perms"]:
             if groupname in data["perms"][cherrypy.request.login]:
                 return True
@@ -71,9 +72,10 @@ def member_of(groupname):
     return check
 
 def name_is(reqd_username):
+    """Returns username check"""
     return lambda: reqd_username == cherrypy.request.login
 
-# These might be handy
+# Extra stuff
 
 def any_of(*conditions):
     """Returns True if any of the conditions match"""
